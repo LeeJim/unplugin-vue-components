@@ -28,7 +28,7 @@ function getSideEffects(importName: string, options: TDesignResolverOptions): Si
   if (!importStyle)
     return
 
-  if (fileName === 'config-provider')
+  if (['config-provider', 'icon'].includes(fileName))
     return
 
   if (fileName.includes('-') && fileName !== 'input-number') {
