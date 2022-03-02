@@ -48,6 +48,9 @@ function getSideEffects(importName: string, options: TDesignResolverOptions): Si
   if (['aside', 'layout', 'header', 'footer', 'content'].includes(fileName))
     fileName = 'layout'
 
+  if (['head-menu', 'submenu'].includes(fileName))
+    fileName = 'menu'
+
   if (['option', 'option-group'].includes(fileName))
     fileName = 'select'
 
